@@ -20,7 +20,7 @@
 ### Page Load
 ✅ Homepage loads successfully in browser at http://127.0.0.1:3000
 
-![Juice Shop Homepage](../screenshots/juice-shop-home.png)
+![Juice Shop Homepage](screenshots/juice-shop-home.png)
 
 ### API Check
 
