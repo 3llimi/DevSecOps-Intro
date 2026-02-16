@@ -1,7 +1,6 @@
 # Lab 2 Submission - Threat Modeling with Threagile
 
-**Author:** [Your Name Here]  
-**Date:** 2025-02-16  
+**Author:** Ahmed Baha Eddine Alimi 
 **Branch:** `feature/lab2`
 
 ---

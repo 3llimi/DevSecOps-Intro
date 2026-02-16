@@ -1,4 +1,4 @@
-# Risk Analysis Script for Threagile (Fixed)
+# Risk Analysis Script for Threagile
 param(
     [string]$JsonPath = "labs/lab2/baseline/risks.json",
     [string]$Label = "BASELINE"
