@@ -57,6 +57,8 @@ All expected files generated successfully in `labs/lab2/baseline/`:
 - Low severity: 5 risks (22%)
 
 ### 1.3 Risk Analysis and Documentation
+<img src="lab2/baseline/data-flow-diagram.png" alt="Baseline Data Flow" width="600" height="600">
+<img src="lab2/secure/data-flow-diagram.png" alt="Secure Data Flow" width="600" height="600">
 
 #### Risk Ranking Methodology
 
