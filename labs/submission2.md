@@ -13,10 +13,7 @@ Successfully generated baseline threat model for OWASP Juice Shop v19.0.0 using 
 
 **Command executed:**
 ```bash
-docker run --rm -v "$(pwd):/app/work" threagile/threagile \
-  -model /app/work/labs/lab2/threagile-model.yaml \
-  -output /app/work/labs/lab2/baseline \
-  -generate-risks-excel=false -generate-tags-excel=false
+docker run --rm -v "${PWD}:/app/work" threagile/threagile -model /app/work/labs/lab2/threagile-model.yaml -output /app/work/labs/lab2/baseline -generate-risks-excel=false -generate-tags-excel=false
 ```
 
 **Architecture Modeled:**
@@ -262,10 +259,8 @@ encryption: transparent
 
 **Command executed:**
 ```bash
-docker run --rm -v "$(pwd):/app/work" threagile/threagile \
-  -model /app/work/labs/lab2/threagile-model.secure.yaml \
-  -output /app/work/labs/lab2/secure \
-  -generate-risks-excel=false -generate-tags-excel=false
+docker run --rm -v "${PWD}:/app/work" threagile/threagile -model /app/work/labs/lab2/threagile-model.secure.yaml -output /app/work/labs/lab2/secure -generate-risks-excel=false -generate-tags-excel=false
+
 ```
 
 **Results:**
@@ -593,18 +588,12 @@ labs/lab2/
 
 **Generate baseline threat model:**
 ```bash
-docker run --rm -v "$(pwd):/app/work" threagile/threagile \
-  -model /app/work/labs/lab2/threagile-model.yaml \
-  -output /app/work/labs/lab2/baseline \
-  -generate-risks-excel=false -generate-tags-excel=false
+docker run --rm -v "${PWD}:/app/work" threagile/threagile -model /app/work/labs/lab2/threagile-model.yaml -output /app/work/labs/lab2/baseline -generate-risks-excel=false -generate-tags-excel=false
 ```
 
 **Generate secure variant:**
 ```bash
-docker run --rm -v "$(pwd):/app/work" threagile/threagile \
-  -model /app/work/labs/lab2/threagile-model.secure.yaml \
-  -output /app/work/labs/lab2/secure \
-  -generate-risks-excel=false -generate-tags-excel=false
+docker run --rm -v "${PWD}:/app/work" threagile/threagile -model /app/work/labs/lab2/threagile-model.secure.yaml -output /app/work/labs/lab2/secure -generate-risks-excel=false -generate-tags-excel=false
 ```
 
 **Generate risk comparison (jq method - as required):**
@@ -646,10 +635,3 @@ powershell -ExecutionPolicy Bypass -File labs/lab2/compare-risks.ps1
 - **PowerShell** - Risk analysis and comparison scripting
 - **YAML** - Infrastructure-as-code threat model format
 - **OWASP Juice Shop v19.0.0** - Target application
-
-### References
-
-- [Threagile Documentation](https://threagile.io/docs/)
-- [OWASP Threat Modeling Process](https://owasp.org/www-community/Threat_Modeling_Process)
-- [Microsoft STRIDE Threat Model](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats)
-- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
