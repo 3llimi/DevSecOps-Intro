@@ -62,6 +62,8 @@ Signed commits close this gap in several ways:
 
 In short, commit signing is a low-effort, high-impact control that anchors trust in the entire software delivery chain.
 
+> ![Verified Badge](screenshots/Verified.png)
+
 ---
 
 ## Task 2 — Pre-commit Secret Scanning
