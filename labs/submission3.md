@@ -95,7 +95,7 @@ On every `git commit`, the hook:
 Created a test file containing a fake Stripe API key:
 
 ```bash
-echo 'sk_live_abcdef1234567890abcdef' > test-secret.txt
+echo 'sk_live_************************' > test-secret.txt
 git add test-secret.txt
 git commit -m "test: this should be blocked"
 ```
@@ -114,8 +114,8 @@ git commit -m "test: this should be blocked"
 [pre-commit] Gitleaks scan on staged files…
 [pre-commit] Scanning test-secret.txt with Gitleaks...
 Gitleaks found secrets in test-secret.txt:
-Finding:     sk_live_abcdef1234567890abcdef
-Secret:      sk_live_abcdef1234567890abcdef
+Finding:     sk_live_************************
+Secret:      sk_live_************************
 RuleID:      stripe-access-token
 Entropy:     4.348394
 File:        test-secret.txt
