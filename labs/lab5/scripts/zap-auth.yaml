@@ -1,0 +1,52 @@
+﻿---
+env:
+  contexts:
+  - name: "Juice Shop"
+    urls:
+    - "http://localhost:3000"
+    includePaths:
+    - "http://localhost:3000.*"
+    authentication:
+      method: "json"
+      parameters:
+        loginPageUrl: "http://localhost:3000/rest/user/login"
+        loginRequestData: '{"email":"admin@juice-sh.op","password":"admin123"}'
+        loginPageWait: 2
+      verification:
+        method: "response"
+        loggedInRegex: "authentication"
+        pollFrequency: 60
+        pollUnits: "requests"
+    sessionManagement:
+      method: "cookie"
+    users:
+    - name: "admin"
+      credentials:
+        username: "admin@juice-sh.op"
+        password: "admin123"
+jobs:
+- type: spider
+  parameters:
+    user: "admin"
+    maxDuration: 2
+- type: spiderAjax
+  parameters:
+    user: "admin"
+    maxDuration: 2
+- type: passiveScan-wait
+  parameters:
+    maxDuration: 5
+- type: activeScan
+  parameters:
+    user: "admin"
+    maxDuration: 10
+- type: report
+  parameters:
+    template: "traditional-html"
+    reportDir: "/zap/wrk"
+    reportFile: "report-auth"
+  risks:
+  - high
+  - medium
+  - low
+  - informational
